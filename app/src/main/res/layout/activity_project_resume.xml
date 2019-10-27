@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back2"
+    tools:context=".ProjectResumeActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/addtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/project_resume_title"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/check66"
+            android:src="@drawable/check"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#AAAAAA"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addtitle"
+            />
+
+        <TextView
+            android:id="@+id/txname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="공고명"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/line1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showname"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showname"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 굿모니터링 서포터즈 1기"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/line1"
+            app:layout_constraintLeft_toRightOf="@id/txname"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txneedman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="모집인원"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showneedman"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showneedman"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 100"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showname"
+            app:layout_constraintLeft_toRightOf="@id/txneedman"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="모집기간"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txneedman"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showdate"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showdate"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" ~ 2019.05.31"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showneedman"
+            app:layout_constraintLeft_toRightOf="@id/txdate"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txneeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="자격요건"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txdate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showneeds"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showneeds"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" SNS를 잘 활용하시는 분"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showdate"
+            app:layout_constraintLeft_toRightOf="@id/txneeds"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="합격자발표"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txneeds"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showpass"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showpass"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 2019.06.01"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showneeds"
+            app:layout_constraintLeft_toRightOf="@id/txpass"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="지원방법"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txpass"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showtip"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showtip"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 굿모니터링 홈페이지 지원"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showpass"
+            app:layout_constraintLeft_toRightOf="@id/txtip"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txevent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동혜택"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txtip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showevent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showevent"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" SNS 활동 우수자에게 수료증 발급"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showtip"
+            app:layout_constraintLeft_toRightOf="@id/txevent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txdate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동기간"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txevent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showdate2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showdate2"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 2019.06.02 ~ 2019.12.31"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showevent"
+            app:layout_constraintLeft_toRightOf="@id/txdate2"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txcont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동내용"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/txdate2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showcont"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showcont"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 굿모니터링 홍보"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/showdate2"
+            app:layout_constraintLeft_toRightOf="@id/txcont"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".ProjectAddActivity">
+
+        <TextView
+            android:id="@+id/addtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/project_add_title"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/check"
+            android:src="@drawable/check"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addtitle"
+            />
+
+        <TextView
+            android:id="@+id/txcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="구분"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/radiogroup"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            app:layout_constraintLeft_toRightOf="@id/txcategory"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/line11">
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대학생" />
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일반" />
+
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주부" />
+                <RadioButton
+                    android:id="@+id/radio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="글로벌" />
+                <RadioButton
+                    android:id="@+id/radio5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시니어" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line11"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txcategory" />
+
+        <TextView
+            android:id="@+id/txname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="공고명"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line11"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showname"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showname"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 제목을 입력하세요."
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line11"
+            app:layout_constraintLeft_toRightOf="@id/txname"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txname" />
+
+        <TextView
+            android:id="@+id/txneedman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="모집인원"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showneedman"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showneedman"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 숫자만 입력하세요."
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            app:layout_constraintLeft_toRightOf="@id/txneedman"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txneedman" />
+
+        <TextView
+            android:id="@+id/txdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="모집기간"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showdate1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showdate1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint=" 숫자 8자리"
+            android:inputType="none"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line3"
+            app:layout_constraintLeft_toRightOf="@id/txdate"
+            app:layout_constraintRight_toLeftOf="@id/betweenshowdate"
+            />
+
+        <TextView
+            android:id="@+id/betweenshowdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="~"
+            app:layout_constraintTop_toBottomOf="@id/line3"
+            app:layout_constraintLeft_toRightOf="@id/showdate1"
+            app:layout_constraintRight_toLeftOf="@id/showdate2"
+            />
+
+        <EditText
+            android:id="@+id/showdate2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 숫자 8자리"
+            android:inputType="date"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line3"
+            app:layout_constraintLeft_toRightOf="@id/betweenshowdate"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txdate"
+            />
+
+        <TextView
+            android:id="@+id/txneeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="자격요건"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showneeds"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showneeds"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" ex) SNS 활용 우수자"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line4"
+            app:layout_constraintLeft_toRightOf="@id/txneeds"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txneeds"
+            />
+
+        <TextView
+            android:id="@+id/txpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="합격자발표"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showpass"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showpass"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 숫자 8자리"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line5"
+            app:layout_constraintLeft_toRightOf="@id/txpass"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txpass"
+            />
+
+        <TextView
+            android:id="@+id/txtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="지원방법"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showtip"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showtip"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" ex) 굿모니터링 홈페이지 지원"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line6"
+            app:layout_constraintLeft_toRightOf="@id/txtip"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line7"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtip"
+            />
+
+        <TextView
+            android:id="@+id/txevent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동혜택"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/line7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showevent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showevent"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" ex) 활동비 지급"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="@id/line7"
+            app:layout_constraintLeft_toRightOf="@id/txevent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line8"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txevent"
+            />
+
+        <TextView
+            android:id="@+id/txdate23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동기간"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showdate231"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showdate231"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint=" 숫자 8자리"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line8"
+            app:layout_constraintLeft_toRightOf="@id/txdate23"
+            app:layout_constraintRight_toLeftOf="@id/betweenshowdate2"
+            />
+
+        <TextView
+            android:id="@+id/betweenshowdate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="~"
+            app:layout_constraintTop_toBottomOf="@id/line8"
+            app:layout_constraintLeft_toRightOf="@id/showdate231"
+            app:layout_constraintRight_toLeftOf="@id/showdate232"
+            />
+
+        <EditText
+            android:id="@+id/showdate232"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" 숫자 8자리"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line8"
+            app:layout_constraintLeft_toRightOf="@id/betweenshowdate2"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line9"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txdate23"
+            />
+
+        <TextView
+            android:id="@+id/txcont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="활동내용"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/showcont"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <EditText
+            android:id="@+id/showcont"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:hint=" ex) 굿모니터링 홍보"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/line9"
+            app:layout_constraintLeft_toRightOf="@id/txcont"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <View
+            android:id="@+id/line10"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txcont"
+            />
+
+        <TextView
+            android:id="@+id/txfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="파일업로드"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/line10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <Button
+            android:id="@+id/getfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="파일선택"
+            app:layout_constraintTop_toBottomOf="@id/line10"
+            app:layout_constraintLeft_toRightOf="@id/txfile" />
+
+        <TextView
+            android:id="@+id/getfilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="22dp"
+            android:text="파일명"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line10"
+            app:layout_constraintLeft_toRightOf="@id/getfile"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        tools:context=".ManagementActivity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:overScrollMode="never"
+                android:src="@drawable/logo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/addActivityGo"
+                app:layout_constraintRight_toLeftOf="@id/loginActivityGo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/loginActivityGo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/login"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:overScrollMode="never"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Button
+                android:id="@+id/addActivityGo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/plus"
+                android:layout_marginTop="50dp"
+                android:overScrollMode="never"
+                app:layout_constraintRight_toLeftOf="@id/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/layoutLinear0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/logo">
+
+                <TextView
+                    android:id="@+id/textLinear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최근 등록된 모집 정보"
+                    android:textStyle="bold"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="27dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/imagebuttonLinear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingTop="17dp"
+                    android:layout_marginRight="23dp"
+                    android:background="#ffffffff"
+                    android:src="@drawable/plus1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLinearListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                app:layout_constraintTop_toBottomOf="@id/layoutLinear0">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:scrollbars="none"
+                    android:divider="#d1d1d1"
+                    android:dividerHeight="1dp"
+                    app:layout_constraintBottom_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLinear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="7dp"
+                android:background="#ffffff"
+                app:layout_constraintTop_toBottomOf="@id/layoutLinearListView">
+
+                <TextView
+                    android:id="@+id/textLinear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="마감 임박 모집 정보"
+                    android:textStyle="bold"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="27dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/imagebuttonLinear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingTop="17dp"
+                    android:layout_marginRight="19dp"
+                    android:background="#ffffffff"
+                    android:src="@drawable/plus1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLinearListView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                app:layout_constraintTop_toBottomOf="@id/layoutLinear1">
+
+                <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:scrollbars="none"
+                    android:divider="#d1d1d1"
+                    android:dividerHeight="1dp"
+                    app:layout_constraintBottom_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/allCategoryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="전체 카테고리 보기"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/layoutLinearListView2" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#ffffff"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer">
+
+        <!--<TextView
+            android:id="@+id/drawText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="드로우바얌"
+            android:textSize="50sp" />
+
+        <View
+            android:id="@+id/drawView1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="#d1d1d1"
+            app:layout_constraintTop_toBottomOf="@id/drawText"/>
+
+        <TextView
+            android:id="@+id/drawGotoMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인화면"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/drawView1"/>-->
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@color/colorHeader"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/getImageUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_gravity="center"
+        android:src="@drawable/person" />
+
+    <TextView
+        android:id="@+id/getTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디넣을거"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/getUserIng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인 로그아웃"
+        android:textColor="#a1a1a1"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+</LinearLayout>

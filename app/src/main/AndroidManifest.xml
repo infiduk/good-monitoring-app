@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.loginactivity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivitiy" />
+        <activity android:name=".LoginActivity">
+            <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".LoginActivity2" />
+        <activity android:name=".ManagementActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+       </activity>
+       <activity android:name=".ProjectResumeActivity" />
+       <activity android:name=".ProjectAddActivity">
+           <!--<intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>-->
+        </activity>
+        <activity android:name=".ProjectDetail" />
+        <activity android:name=".CoordinateActivity">
+             <!--<intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
+        </activity>
+        <activity android:name=".UserProjectDetail">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".MainRecentlyActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".ManagementRecentlyActivity" />
+        <activity android:name=".MainAllCategoryActivity" />
+        <activity android:name=".ManagementAllCategoryActivity" />
+        <activity android:name=".MainRecentlyActivity2" />
+        <activity android:name=".ManagementRecentlyActivity2" />
+        <activity android:name=".MainRecentlyActivity3" />
+        <activity android:name=".ManagementRecentlyActivity3" />
+        <activity android:name=".MainDescActivity" />
+        <activity android:name=".ManagementDescActivity" />
+        <activity android:name=".MainDaeActivity" />
+        <activity android:name=".ManagementDaeActivity" />
+        <activity android:name=".MainIllActivity" />
+        <activity android:name=".ManagementIllActivity" />
+        <activity android:name=".MainJuActivity" />
+        <activity android:name=".ManagementJuActivity" />
+        <activity android:name=".MainGloActivity" />
+        <activity android:name=".ManagementGloActivity" />
+        <activity android:name=".MainSiniActivity" />
+        <activity android:name=".ManagementSiniActivity" />
+        <activity android:name=".UserProjectModify" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
